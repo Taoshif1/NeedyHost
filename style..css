@@ -1,0 +1,95 @@
+
+/* Transparent card Glassmorphism effect */
+.transparent-card {
+  background: rgba(255, 255, 255, 0.3); 
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  color: #1e293b; 
+}
+
+/* Lighter glass effect for elements inside cards */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Nav bar when scrolled (darker glass) */
+.nav-glass {
+  background: rgba(10, 30, 80, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Keep iframe map responsive */
+.map-wrap {
+  aspect-ratio: 16/8;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Gradient color variables (Toned Blue) */
+:root {
+  --g1: #ffd6d6;
+  --g2: #ccf7ff;
+  --g3: #e0d4ff;
+  --g4: #d6ecff;
+}
+
+/* Multi-color gradient animation */
+.bg-animate {
+  background: linear-gradient(
+    135deg,
+    var(--g1),
+    var(--g2),
+    var(--g3),
+    var(--g4)
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+/* Dropdown animations (desktop + mobile) */
+.dropdown {
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.mobile-dropdown.show {
+  max-height: 300px;
+  opacity: 1;
+}
+
+ @keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%; 
+  }
+}
+
