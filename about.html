@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NeedyHost</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+<main class="max-w-7xl mx-auto px-4 py-12 pb-24 pt-24">
+
+        <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 pointer-events-none"
+    >
+      <div
+  id="nav-inner"
+  class="pointer-events-auto
+         mx-auto flex items-center justify-between
+         px-4 py-3
+         w-full max-w-full
+         rounded-none
+         transition-all duration-300
+         bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white"
+>
+        <a href="#/" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-md bg-white/20 flex items-center justify-center font-bold text-lg"
+          >
+            NH
+          </div>
+          <div>
+            <div class="font-semibold">NeedyHost</div>
+            <div class="text-xs opacity-90">Host your dreams</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-4 relative">
+          <a href="#/" class="px-3 py-2 rounded hover:bg-white/20">Home</a>
+          <a href="about.html" class="px-3 py-2 rounded hover:bg-white/20"
+            >About</a
+          >
+
+          <div class="relative">
+            <button
+              id="host-btn"
+              class="px-3 py-2 rounded hover:bg-white/20 flex items-center gap-1 font-medium text-white"
+            >
+              Hosting ▼
+            </button>
+            <div
+              class="absolute mt-2 rounded-lg w-48 shadow-lg dropdown bg-white/90 text-slate-800 border border-slate-200 backdrop-blur-lg"
+            >
+              <a
+                href="shared.html"
+                class="block px-4 py-2 text-slate-800 hover:bg-blue-50 rounded"
+                >Shared Hosting</a
+              >
+              <a
+                href="#/resell"
+                class="block px-4 py-2 text-slate-800 hover:bg-blue-50 rounded"
+                >Reseller Hosting</a
+              >
+              <a
+                href="#/vps"
+                class="block px-4 py-2 text-slate-800 hover:bg-blue-50 rounded"
+                >VPS Hosting</a
+              >
+            </div>
+          </div>
+
+          <div class="relative">
+            <button
+              id="domain-btn"
+              class="px-3 py-2 rounded hover:bg-white/20 flex items-center gap-1 font-medium text-white"
+            >
+              Domains ▼
+            </button>
+            <div
+              class="absolute mt-2 rounded-lg w-48 shadow-lg dropdown bg-white/90 text-slate-800 border border-slate-200 backdrop-blur-lg"
+            >
+              <a
+                href="#/domain-register"
+                class="block px-4 py-2 text-slate-800 hover:bg-blue-50 rounded"
+                >Domain Registration</a
+              >
+              <a
+                href="#/domain-transfer"
+                class="block px-4 py-2 text-slate-800 hover:bg-blue-50 rounded"
+                >Domain Transfer</a
+              >
+            </div>
+          </div>
+
+          <a href="#/contact" class="px-3 py-2 rounded bg-white/20 font-medium"
+            >Contact</a
+          >
+          <a
+  href="#/login"
+  class="ml-2 px-4 py-2 rounded-full
+         bg-white text-blue-700 font-semibold
+         hover:bg-blue-50 transition"
+>
+  Login
+</a>
+
+        </nav>
+
+        <div class="md:hidden">
+          <button id="burger" class="p-2 rounded hover:bg-white/10">☰</button>
+        </div>
+      </div>
+      <div id="mobileNav" class="md:hidden hidden bg-black/60 backdrop-blur-lg">
+        <div class="px-4 py-3 flex flex-col gap-2 text-white">
+          <a href="#/" class="px-3 py-2 rounded hover:bg-white/10">Home</a>
+          <a href="#/about" class="px-3 py-2 rounded hover:bg-white/10"
+            >About</a
+          >
+
+          <div>
+            <button
+              onclick="toggleMobile('hostMenu')"
+              class="w-full text-left px-3 py-2 rounded hover:bg-white/10"
+            >
+              Hosting ▼
+            </button>
+            <div id="hostMenu" class="mobile-dropdown pl-4">
+              <a href="#/shared" class="block py-2">Shared Hosting</a>
+              <a href="#/resell" class="block py-2">Reseller Hosting</a>
+              <a href="#/vps" class="block py-2">VPS Hosting</a>
+            </div>
+          </div>
+
+          <div>
+            <button
+              onclick="toggleMobile('domainMenu')"
+              class="w-full text-left px-3 py-2 rounded hover:bg-white/10"
+            >
+              Domains ▼
+            </button>
+            <div id="domainMenu" class="mobile-dropdown pl-4">
+              <a href="#/domain-register" class="block py-2"
+                >Domain Registration</a
+              >
+              <a href="#/domain-transfer" class="block py-2">Domain Transfer</a>
+            </div>
+          </div>
+
+          <a href="#/contact" class="px-3 py-2 rounded bg-white/20">Contact</a>
+          <a
+  href="#/login"
+  class="mt-2 px-4 py-2 rounded-full
+         bg-white text-blue-700 font-semibold text-center"
+>
+  Login
+</a>
+
+        </div>
+      </div>
+    </header>
+    
+
+  <!-- Intro -->
+  <section class="transparent-card max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold text-slate-900">About NeedyHost</h2>
+    <p class="mt-4 text-lg text-slate-600">
+      Founded in 2023, NeedyHost was built on the belief that
+      <span class="font-semibold text-blue-700">powerful, secure hosting</span>
+      should be affordable and easy for everyone.
+    </p>
+  </section>
+
+  <!-- Mission / Vision -->
+  <section class="mt-12 grid md:grid-cols-2 gap-8">
+    <div class="transparent-card">
+      <h3 class="text-2xl font-bold text-slate-900 mb-2">🚀 Our Mission</h3>
+      <p class="text-slate-600">
+        Our mission is to empower creators, startups, and businesses with
+        fast, reliable, and secure hosting solutions—without complexity or
+        hidden costs.
+      </p>
+    </div>
+
+    <div class="transparent-card">
+      <h3 class="text-2xl font-bold text-slate-900 mb-2">🌍 Our Vision</h3>
+      <p class="text-slate-600">
+        We envision a web where anyone can launch, scale, and succeed online
+        with confidence—backed by rock-solid infrastructure and real human
+        support.
+      </p>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="mt-14">
+    <h3 class="text-3xl font-bold text-center text-slate-900 mb-8">
+      What Makes Us Different
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="transparent-card text-center">
+        <h4 class="text-xl font-semibold text-blue-700">⚡ Performance First</h4>
+        <p class="text-sm text-slate-600 mt-2">
+          NVMe SSD storage, LiteSpeed servers, and optimized stacks for blazing-fast websites.
+        </p>
+      </div>
+
+      <div class="transparent-card text-center">
+        <h4 class="text-xl font-semibold text-blue-700">🔐 Security Built-In</h4>
+        <p class="text-sm text-slate-600 mt-2">
+          Free SSL, daily backups, malware protection, and proactive monitoring.
+        </p>
+      </div>
+
+      <div class="transparent-card text-center">
+        <h4 class="text-xl font-semibold text-blue-700">🤝 Human Support</h4>
+        <p class="text-sm text-slate-600 mt-2">
+          24/7 expert support from real people who actually care about your success.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mt-16 text-center">
+    <h3 class="text-3xl font-bold text-slate-900">
+      Ready to Build With NeedyHost?
+    </h3>
+    <p class="text-slate-600 mt-3">
+      Join hundreds of creators and businesses who trust NeedyHost.
+    </p>
+
+    <div class="mt-6 flex justify-center gap-4">
+      <a
+        href="shared.html"
+        class="px-8 py-4 rounded-full bg-blue-700 text-white font-bold hover:bg-blue-600 transition"
+      >
+        View Plans
+      </a>
+      <a
+        href="contact.html"
+        class="px-8 py-4 rounded-full border border-blue-700 text-blue-700 font-bold hover:bg-blue-50 transition"
+      >
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
