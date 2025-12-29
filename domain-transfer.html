@@ -1,8 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NeedyHost</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
 <main class="max-w-7xl mx-auto px-4 py-12 pb-24 pt-24">
-  <section class="transparent-card text-center">
-    <h2 class="text-4xl font-bold text-slate-900">Domain Transfer</h2>
-    <p class="text-lg text-slate-600 mt-4">
-      Transfer your domain to NeedyHost for better control and pricing.
-    </p>
-  </section>
-</main>
+
+        <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 pointer-events-none"
+    >
+      <div
+  id="nav-inner"
+  class="pointer-events-auto
+         mx-auto flex items-center justify-between
+         px-4 py-3
+         w-full max-w-full
+         rounded-none
+         transition-all duration-300
+         bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white"
+>
+        <a href="#/" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-md bg-white/20 flex items-center justify-center font-bold text-lg"
+          >
+            NH
+          </div>
+          <div>
+            <div class="font-semibold">NeedyHost</div>
+            <div class="text-xs opacity-90">Host your dreams</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-4 relative">
+          <a href="/" class="px-3 py-2 rounded hover:bg-white/20">Home</a>
+          <a href="about.html" class="px-3 py-2 rounded hover:bg-white/20"
+            >About</a
+          >
+
+          <div class="relative">
+  <button
+    id="hostBtn"
+    class="px-3 py-2 rounded hover:bg-white/20 flex items-center gap-1 font-medium text-white"
+  >
+    Hosting ▼
+  </button>
+
+  <div
+    id="hostMenuDesktop"
+    class="absolute mt-2 w-48 rounded-lg shadow-lg hidden
+           bg-white/90 text-slate-800 border border-slate-200 backdrop-blur-lg"
+  >
+    <a href="shared.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Shared Hosting
+</a>
+<a href="resell.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Reseller Hosting
+</a>
+<a href="vps.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  VPS Hosting
+</a>
+
+  </div>
+</div>
+
+
+          
+
+<div class="relative">
+  <button
+    id="domainBtn"
+    class="px-3 py-2 rounded hover:bg-white/20 flex items-center gap-1 font-medium text-white"
+  >
+    Domains ▼
+  </button>
+
+  <div
+    id="domainMenuDesktop"
+    class="absolute mt-2 w-48 rounded-lg shadow-lg hidden
+           bg-white/90 text-slate-800 border border-slate-200 backdrop-blur-lg"
+  >
+    <a href="domain-register.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Domain Registration
+</a>
+<a href="domain-transfer.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Domain Transfer
+</a>
+
+  </div>
+</div>
+
+          <a href="contact.html" class="px-3 py-2 rounded bg-white/20 font-medium">
+  Contact
+</a>
+          <a
+  href="login.html"
+  class="ml-2 px-4 py-2 rounded-full
+         bg-white text-blue-700 font-semibold
+         hover:bg-blue-50 transition"
+>
+  Login
+</a>
+
+
+        </nav>
+
+        <div class="md:hidden">
+          <button id="burger" class="p-2 rounded hover:bg-white/10">☰</button>
+        </div>
+      </div>
+      <div id="mobileNav" class="md:hidden hidden bg-black/60 backdrop-blur-lg">
+        <div class="px-4 py-3 flex flex-col gap-2 text-white">
+          <a href="#/" class="px-3 py-2 rounded hover:bg-white/10">Home</a>
+          <a href="#/about" class="px-3 py-2 rounded hover:bg-white/10"
+            >About</a
+          >
+
+          <div>
+            <button
+              onclick="toggleMobile('hostMenu')"
+              class="w-full text-left px-3 py-2 rounded hover:bg-white/10"
+            >
+              Hosting ▼
+            </button>
+            <div id="hostMenu" class="mobile-dropdown pl-4">
+              <a href="shared.html" class="block py-2">Shared Hosting</a>
+              <a href="resell.html" class="block py-2">Reseller Hosting</a>
+              <a href="vps.html" class="block py-2">VPS Hosting</a>
+            </div>
+          </div>
+
+          <div>
+            <button
+              onclick="toggleMobile('domainMenu')"
+              class="w-full text-left px-3 py-2 rounded hover:bg-white/10"
+            >
+              Domains ▼
+            </button>
+            <div id="domainMenu" class="mobile-dropdown pl-4">
+              <a href="domain-register.html" class="block py-2"
+                >Domain Registration</a
+              >
+              <a href="domain-transfer.html" class="block py-2">Domain Transfer</a>
+            </div>
+          </div>
+
+          <a href="contact.html" class="px-3 py-2 rounded bg-white/20">Contact</a>
+          <a
+  href="login.html"
+  class="mt-2 px-4 py-2 rounded-full
+         bg-white text-blue-700 font-semibold text-center"
+>
+  Login
+</a>
+
+        </div>
+      </div>
+    </header>
+
+
+
+    <section class="text-center py-16">
+  <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6">
+    Bring Your Domain <span class="text-blue-600">Home</span>
+  </h1>
+  <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-10">
+    Transfer your domain to NeedyHost and get an extra year of registration for free. Simple, fast, and no hidden fees.
+  </p>
+
+  <div class="max-w-3xl mx-auto bg-white p-2 rounded-2xl shadow-2xl border border-slate-100 flex flex-col md:flex-row gap-2">
+    <input 
+      type="text" 
+      placeholder="your-existing-domain.com" 
+      class="flex-1 px-6 py-4 rounded-xl text-lg outline-none focus:ring-2 focus:ring-blue-500 transition"
+    >
+    <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition">
+      Start Transfer
+    </button>
+  </div>
+  <p class="mt-4 text-sm text-slate-400">Join 10,000+ users who moved to better hosting this month.</p>
+</section>
+
+<section class="py-16 bg-slate-50 rounded-3xl px-8 my-12">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-slate-900">3 Simple Steps to Transfer</h2>
+  </div>
+  
+  <div class="grid md:grid-cols-3 gap-12">
+    <div class="relative text-center">
+      <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+      <h3 class="font-bold text-lg text-slate-900 mb-2">Unlock Domain</h3>
+      <p class="text-slate-600 text-sm">Unlock your domain at your current registrar and get the EPP/Auth code.</p>
+      <div class="hidden md:block absolute top-6 left-[60%] w-full border-t-2 border-dashed border-slate-200"></div>
+    </div>
+
+    <div class="relative text-center">
+      <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+      <h3 class="font-bold text-lg text-slate-900 mb-2">Submit Request</h3>
+      <p class="text-slate-600 text-sm">Enter your domain name and Auth code in our transfer tool above.</p>
+      <div class="hidden md:block absolute top-6 left-[60%] w-full border-t-2 border-dashed border-slate-200"></div>
+    </div>
+
+    <div class="text-center">
+      <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+      <h3 class="font-bold text-lg text-slate-900 mb-2">Confirm & Relax</h3>
+      <p class="text-slate-600 text-sm">Click the confirmation link in your email. We’ll handle the rest automatically.</p>
+    </div>
+  </div>
+</section>
+
+<section class="grid md:grid-cols-2 gap-16 items-center py-12">
+  <div>
+    <h2 class="text-3xl font-bold text-slate-900 mb-6">Why move to NeedyHost?</h2>
+    <ul class="space-y-4">
+      <li class="flex items-start gap-3">
+        <span class="text-green-500 font-bold">✓</span>
+        <div>
+          <p class="font-bold text-slate-800">Free 1-Year Extension</p>
+          <p class="text-slate-600 text-sm">Most TLDs get an automatic 12-month extension upon successful transfer.</p>
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-500 font-bold">✓</span>
+        <div>
+          <p class="font-bold text-slate-800">Centralized Management</p>
+          <p class="text-slate-600 text-sm">Keep your hosting and your domains under one powerful, easy-to-use roof.</p>
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-500 font-bold">✓</span>
+        <div>
+          <p class="font-bold text-slate-800">Zero Downtime</p>
+          <p class="text-slate-600 text-sm">Your website stays online throughout the entire transfer process.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="bg-blue-600 p-8 rounded-3xl text-white shadow-xl">
+    <h3 class="text-xl font-bold mb-4">Transfer FAQ</h3>
+    <div class="space-y-4">
+      <details class="group bg-blue-700/50 rounded-xl p-4 cursor-pointer">
+        <summary class="font-medium">How long does it take?</summary>
+        <p class="mt-2 text-blue-100 text-sm">Most transfers take between 5 to 7 days, depending on your current registrar's approval speed.</p>
+      </details>
+      <details class="group bg-blue-700/50 rounded-xl p-4 cursor-pointer">
+        <summary class="font-medium">Will I lose my remaining time?</summary>
+        <p class="mt-2 text-blue-100 text-sm">No! Your existing time is carried over, and we add one additional year on top of it.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+
+    </main>
+  </body>
+</html>
+
+<script>
+  const hostBtn = document.getElementById("hostBtn");
+  const domainBtn = document.getElementById("domainBtn");
+
+  const hostMenu = document.getElementById("hostMenuDesktop");
+  const domainMenu = document.getElementById("domainMenuDesktop");
+
+  function closeAllDropdowns() {
+    hostMenu.classList.add("hidden");
+    domainMenu.classList.add("hidden");
+  }
+
+  hostBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    domainMenu.classList.add("hidden");
+    hostMenu.classList.toggle("hidden");
+  });
+
+  domainBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    hostMenu.classList.add("hidden");
+    domainMenu.classList.toggle("hidden");
+  });
+
+  // Auto-close when clicking outside
+  document.addEventListener("click", () => {
+    closeAllDropdowns();
+  });
+</script>

@@ -1,31 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NeedyHost</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
 <main class="max-w-7xl mx-auto px-4 py-12 pb-24 pt-24">
-  <section class="transparent-card">
-    <h2 class="text-4xl font-bold text-slate-900">VPS Hosting</h2>
-    <p class="text-xl text-blue-700 mt-2">
-      Dedicated power and full root access.
-    </p>
 
-    <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <div class="transparent-card">
-        <h4 class="font-semibold text-lg">🧠 Dedicated Resources</h4>
-        <p class="text-sm text-slate-600 mt-2">
-          Guaranteed CPU, RAM, and NVMe storage.
-        </p>
-      </div>
+        <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 pointer-events-none"
+    >
+      <div
+  id="nav-inner"
+  class="pointer-events-auto
+         mx-auto flex items-center justify-between
+         px-4 py-3
+         w-full max-w-full
+         rounded-none
+         transition-all duration-300
+         bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white"
+>
+        <a href="#/" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-md bg-white/20 flex items-center justify-center font-bold text-lg"
+          >
+            NH
+          </div>
+          <div>
+            <div class="font-semibold">NeedyHost</div>
+            <div class="text-xs opacity-90">Host your dreams</div>
+          </div>
+        </a>
 
-      <div class="transparent-card">
-        <h4 class="font-semibold text-lg">🔑 Root Access</h4>
-        <p class="text-sm text-slate-600 mt-2">
-          Full control to install and configure anything.
-        </p>
-      </div>
+        <nav class="hidden md:flex items-center gap-4 relative">
+          <a href="/" class="px-3 py-2 rounded hover:bg-white/20">Home</a>
+          <a href="about.html" class="px-3 py-2 rounded hover:bg-white/20"
+            >About</a
+          >
 
-      <div class="transparent-card">
-        <h4 class="font-semibold text-lg">🚀 Ideal For</h4>
-        <p class="text-sm text-slate-600 mt-2">
-          High-traffic sites, apps, custom stacks.
-        </p>
+          <div class="relative">
+  <button
+    id="hostBtn"
+    class="px-3 py-2 rounded hover:bg-white/20 flex items-center gap-1 font-medium text-white"
+  >
+    Hosting ▼
+  </button>
+
+  <div
+    id="hostMenuDesktop"
+    class="absolute mt-2 w-48 rounded-lg shadow-lg hidden
+           bg-white/90 text-slate-800 border border-slate-200 backdrop-blur-lg"
+  >
+    <a href="shared.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Shared Hosting
+</a>
+<a href="resell.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Reseller Hosting
+</a>
+<a href="vps.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  VPS Hosting
+</a>
+
+  </div>
+</div>
+
+
+          
+
+<div class="relative">
+  <button
+    id="domainBtn"
+    class="px-3 py-2 rounded hover:bg-white/20 flex items-center gap-1 font-medium text-white"
+  >
+    Domains ▼
+  </button>
+
+  <div
+    id="domainMenuDesktop"
+    class="absolute mt-2 w-48 rounded-lg shadow-lg hidden
+           bg-white/90 text-slate-800 border border-slate-200 backdrop-blur-lg"
+  >
+    <a href="domain-register.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Domain Registration
+</a>
+<a href="domain-transfer.html" class="block px-4 py-2 hover:bg-blue-50 rounded">
+  Domain Transfer
+</a>
+
+  </div>
+</div>
+
+          <a href="contact.html" class="px-3 py-2 rounded bg-white/20 font-medium">
+  Contact
+</a>
+          <a
+  href="login.html"
+  class="ml-2 px-4 py-2 rounded-full
+         bg-white text-blue-700 font-semibold
+         hover:bg-blue-50 transition"
+>
+  Login
+</a>
+
+
+        </nav>
+
+        <div class="md:hidden">
+          <button id="burger" class="p-2 rounded hover:bg-white/10">☰</button>
+        </div>
       </div>
+      <div id="mobileNav" class="md:hidden hidden bg-black/60 backdrop-blur-lg">
+        <div class="px-4 py-3 flex flex-col gap-2 text-white">
+          <a href="#/" class="px-3 py-2 rounded hover:bg-white/10">Home</a>
+          <a href="#/about" class="px-3 py-2 rounded hover:bg-white/10"
+            >About</a
+          >
+
+          <div>
+            <button
+              onclick="toggleMobile('hostMenu')"
+              class="w-full text-left px-3 py-2 rounded hover:bg-white/10"
+            >
+              Hosting ▼
+            </button>
+            <div id="hostMenu" class="mobile-dropdown pl-4">
+              <a href="shared.html" class="block py-2">Shared Hosting</a>
+              <a href="resell.html" class="block py-2">Reseller Hosting</a>
+              <a href="vps.html" class="block py-2">VPS Hosting</a>
+            </div>
+          </div>
+
+          <div>
+            <button
+              onclick="toggleMobile('domainMenu')"
+              class="w-full text-left px-3 py-2 rounded hover:bg-white/10"
+            >
+              Domains ▼
+            </button>
+            <div id="domainMenu" class="mobile-dropdown pl-4">
+              <a href="domain-register.html" class="block py-2"
+                >Domain Registration</a
+              >
+              <a href="domain-transfer.html" class="block py-2">Domain Transfer</a>
+            </div>
+          </div>
+
+          <a href="contact.html" class="px-3 py-2 rounded bg-white/20">Contact</a>
+          <a
+  href="login.html"
+  class="mt-2 px-4 py-2 rounded-full
+         bg-white text-blue-700 font-semibold text-center"
+>
+  Login
+</a>
+
+        </div>
+      </div>
+    </header>
+
+    <section class="text-center py-12">
+  <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+    High Performance <span class="text-blue-600">Cloud VPS</span>
+  </h1>
+  <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-10">
+    Full root access, dedicated resources, and lightning-fast NVMe storage. Scale your power on demand.
+  </p>
+  
+  <div class="grid md:grid-cols-4 gap-4 text-center">
+    <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+      <p class="text-sm font-bold text-blue-600">Setup</p>
+      <p class="text-slate-800">Instant</p>
     </div>
-  </section>
-</main>
+    <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+      <p class="text-sm font-bold text-blue-600">Storage</p>
+      <p class="text-slate-800">Pure NVMe</p>
+    </div>
+    <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+      <p class="text-sm font-bold text-blue-600">Network</p>
+      <p class="text-slate-800">1 Gbps</p>
+    </div>
+    <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+      <p class="text-sm font-bold text-blue-600">Virtualization</p>
+      <p class="text-slate-800">KVM</p>
+    </div>
+  </div>
+</section>
+
+<section class="grid md:grid-cols-3 gap-8 mt-8">
+  <div class="bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-500 transition-all shadow-sm">
+    <h3 class="text-xl font-bold text-slate-900">Standard-01</h3>
+    <div class="my-6">
+      <span class="text-4xl font-black">$8.99</span>
+      <span class="text-slate-500">/mo</span>
+    </div>
+    <ul class="space-y-4 mb-8 text-slate-600">
+      <li class="flex justify-between"><span>RAM</span><span class="font-bold">2 GB</span></li>
+      <li class="flex justify-between"><span>vCPU</span><span class="font-bold">1 Core</span></li>
+      <li class="flex justify-between"><span>Storage</span><span class="font-bold">40 GB NVMe</span></li>
+      <li class="flex justify-between"><span>Bandwidth</span><span class="font-bold">1 TB</span></li>
+    </ul>
+    <button class="w-full py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-blue-600 transition">Order Now</button>
+  </div>
+
+  <div class="bg-white p-8 rounded-3xl border-2 border-blue-600 shadow-xl relative scale-105">
+    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold">BEST SELLER</div>
+    <h3 class="text-xl font-bold text-slate-900">Professional-02</h3>
+    <div class="my-6">
+      <span class="text-4xl font-black">$17.99</span>
+      <span class="text-slate-500">/mo</span>
+    </div>
+    <ul class="space-y-4 mb-8 text-slate-600">
+      <li class="flex justify-between"><span>RAM</span><span class="font-bold">4 GB</span></li>
+      <li class="flex justify-between"><span>vCPU</span><span class="font-bold">2 Cores</span></li>
+      <li class="flex justify-between"><span>Storage</span><span class="font-bold">80 GB NVMe</span></li>
+      <li class="flex justify-between"><span>Bandwidth</span><span class="font-bold">3 TB</span></li>
+    </ul>
+    <button class="w-full py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Order Now</button>
+  </div>
+
+  <div class="bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-500 transition-all shadow-sm">
+    <h3 class="text-xl font-bold text-slate-900">Enterprise-03</h3>
+    <div class="my-6">
+      <span class="text-4xl font-black">$31.99</span>
+      <span class="text-slate-500">/mo</span>
+    </div>
+    <ul class="space-y-4 mb-8 text-slate-600">
+      <li class="flex justify-between"><span>RAM</span><span class="font-bold">8 GB</span></li>
+      <li class="flex justify-between"><span>vCPU</span><span class="font-bold">4 Cores</span></li>
+      <li class="flex justify-between"><span>Storage</span><span class="font-bold">160 GB NVMe</span></li>
+      <li class="flex justify-between"><span>Bandwidth</span><span class="font-bold">5 TB</span></li>
+    </ul>
+    <button class="w-full py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-blue-600 transition">Order Now</button>
+  </div>
+</section>
+
+    </main>
+  </body>
+</html>
+
+<script>
+  const hostBtn = document.getElementById("hostBtn");
+  const domainBtn = document.getElementById("domainBtn");
+
+  const hostMenu = document.getElementById("hostMenuDesktop");
+  const domainMenu = document.getElementById("domainMenuDesktop");
+
+  function closeAllDropdowns() {
+    hostMenu.classList.add("hidden");
+    domainMenu.classList.add("hidden");
+  }
+
+  hostBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    domainMenu.classList.add("hidden");
+    hostMenu.classList.toggle("hidden");
+  });
+
+  domainBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    hostMenu.classList.add("hidden");
+    domainMenu.classList.toggle("hidden");
+  });
+
+  // Auto-close when clicking outside
+  document.addEventListener("click", () => {
+    closeAllDropdowns();
+  });
+</script>

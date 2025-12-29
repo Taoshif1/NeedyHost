@@ -403,3 +403,32 @@ window.addEventListener("load", () => {
     });
   });
 });
+
+// -----------------------------
+  const hostBtn = document.getElementById("hostBtn");
+  const domainBtn = document.getElementById("domainBtn");
+
+  const hostMenu = document.getElementById("hostMenuDesktop");
+  const domainMenu = document.getElementById("domainMenuDesktop");
+
+  function closeAllDropdowns() {
+    hostMenu.classList.add("hidden");
+    domainMenu.classList.add("hidden");
+  }
+
+  hostBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    domainMenu.classList.add("hidden");
+    hostMenu.classList.toggle("hidden");
+  });
+
+  domainBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    hostMenu.classList.add("hidden");
+    domainMenu.classList.toggle("hidden");
+  });
+
+  // Auto-close when clicking outside
+  document.addEventListener("click", () => {
+    closeAllDropdowns();
+  });
