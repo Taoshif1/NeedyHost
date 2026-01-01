@@ -137,7 +137,7 @@
     
     <!-- Navbar -->
     <header id="navbar" class="fixed top-0 left-0 w-full z-50 pt-4 px-4">
-      <div id="nav-inner" class="pointer-events-auto mx-auto flex items-center justify-between px-6 py-3 max-w-7xl rounded-2xl transition-all duration-300 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white shadow-lg">
+      <div id="nav-inner" class="pointer-events-auto mx-auto flex items-center justify-between px-6 py-3 w-full max-w-full rounded-xl transition-all duration-500 ease-out bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white shadow-lg">
         
         <a href="index.html" class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-md bg-white/20 flex items-center justify-center font-bold text-lg">NH</div>
@@ -169,7 +169,7 @@
           </div>
 
           <a href="contact.html" class="px-3 py-2 rounded bg-white/20">Contact</a>
-          <a href="login.html" class="ml-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold">Login</a>
+          <a href="login.html" class="ml-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold hover:bg-blue-50 hover:shadow-md transition-all">Login</a>
         </nav>
 
         <div class="md:hidden">
@@ -197,7 +197,7 @@
             </div>
           </div>
           <a href="contact.html" class="px-3 py-2 rounded bg-white/20">Contact</a>
-          <a href="login.html" class="mt-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold text-center">Login</a>
+          <a href="login.html" class="mt-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold text-center hover:bg-blue-50 hover:shadow-md transition-all">Login</a>
         </div>
       </div>
     </header>
@@ -207,11 +207,11 @@
       <!-- I'll include the key sections below -->
       
       <!-- Hero Section -->
-      <section class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4">
-          Blazing Fast <span class="text-blue-600">Web Hosting</span>
+      <section class="text-center mb-16 animate-fade-in-up">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-4 text-overflow-safe">
+          Blazing Fast <span class="gradient-heading">Web Hosting</span>
         </h1>
-        <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+        <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto mb-8 px-4 text-overflow-safe">
           Performance, Security, and 24/7 Support—everything you need to build your dreams online.
         </p>
         <div class="flex gap-4 justify-center">
@@ -271,30 +271,30 @@
 
     <!-- price cards section -->
     <section id="price-section" class="max-w-7xl mx-auto px-4 py-8 md:py-16">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">
-          <span class="text-blue-600">Reliable Web Hosting</span> in Bangladesh
+      <div class="text-center mb-10 px-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 text-overflow-safe">
+          <span class="gradient-heading">Reliable Web Hosting</span> in Bangladesh
         </h2>
-        <p class="mt-2 text-lg text-slate-600">
+        <p class="mt-2 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto text-overflow-safe">
           Pick the right web hosting package to power your website from day one
         </p>
       </div>
 
-      <!-- yearly/montly btns -->
-      <div class="flex justify-center items-center gap-6 mb-10">
+      <!-- yearly/monthly btns -->
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-10 px-4">
         <div
           id="billing-switch"
           class="flex p-1 rounded-full bg-white border border-blue-500/50 shadow-inner"
         >
           <button
             data-period="yearly"
-            class="px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 bg-blue-700 text-white"
+            class="px-4 sm:px-6 py-2 rounded-full font-semibold text-xs sm:text-sm transition-all duration-300 bg-blue-700 text-white"
           >
             Yearly
           </button>
           <button
             data-period="monthly"
-            class="px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 text-slate-600 hover:text-blue-700"
+            class="px-4 sm:px-6 py-2 rounded-full font-semibold text-xs sm:text-sm transition-all duration-300 text-slate-600 hover:text-blue-700"
           >
             Monthly
           </button>
@@ -319,10 +319,10 @@
       </div>
 
       <!-- cards -->
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
         <div
           id="plan-essential"
-          class="transparent-card price-card-container transition-all duration-300">
+          class="transparent-card price-card-container hover-lift fade-in-on-scroll">
           <div class="flex justify-between items-center mb-4">
             <span
               class="text-xs font-semibold px-3 py-1 rounded-full bg-red-100 text-red-700"
@@ -497,7 +497,7 @@
 
         <div
           id="plan-business"
-          class="transparent-card price-card-container transition-all duration-300 border-2 border-blue-500 shadow-lg"
+          class="transparent-card price-card-container hover-lift fade-in-on-scroll border-2 border-blue-500 shadow-lg"
         >
           <div class="flex justify-between items-center mb-4">
             <span
@@ -690,7 +690,7 @@
 
         <div
           id="plan-power"
-          class="transparent-card price-card-container transition-all duration-300"
+          class="transparent-card price-card-container hover-lift fade-in-on-scroll"
         >
           <div class="flex justify-between items-center mb-4">
             <span
@@ -883,19 +883,19 @@
 
     <!-- Why choose us -->
     <section class="max-w-7xl mx-auto px-4 py-8 md:py-16">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">
-          Why Choose <span class="text-blue-700 font-semibold">NeedyHost</span>
+      <div class="text-center mb-12 px-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 text-overflow-safe">
+          Why Choose <span class="gradient-heading font-semibold">NeedyHost</span>
         </h2>
-        <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+        <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto text-overflow-safe">
           NeedyHost powers your digital dreams! Launch your website in seconds
           with our lightning-fast, secure, and reliable hosting solutions.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
         <div
-          class="transparent-card group transition-all duration-300 hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
+          class="transparent-card group hover-lift fade-in-on-scroll hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
         >
           <svg
             class="w-8 h-8 text-blue-700 mb-3"
@@ -922,7 +922,7 @@
         </div>
 
         <div
-          class="transparent-card group transition-all duration-300 hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
+          class="transparent-card group hover-lift fade-in-on-scroll hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
         >
           <svg
             class="w-8 h-8 text-blue-700 mb-3"
@@ -949,7 +949,7 @@
         </div>
 
         <div
-          class="transparent-card group transition-all duration-300 hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
+          class="transparent-card group hover-lift fade-in-on-scroll hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
         >
           <svg
             class="w-8 h-8 text-blue-700 mb-3"
@@ -976,7 +976,7 @@
         </div>
 
         <div
-          class="transparent-card group transition-all duration-300 hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
+          class="transparent-card group hover-lift fade-in-on-scroll hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
         >
           <svg
             class="w-8 h-8 text-blue-700 mb-3"
@@ -1003,7 +1003,7 @@
         </div>
 
         <div
-          class="transparent-card group transition-all duration-300 hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
+          class="transparent-card group hover-lift fade-in-on-scroll hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
         >
           <svg
             class="w-8 h-8 text-blue-700 mb-3"
@@ -1030,7 +1030,7 @@
         </div>
 
         <div
-          class="transparent-card group transition-all duration-300 hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
+          class="transparent-card group hover-lift fade-in-on-scroll hover:shadow-lg hover:shadow-blue-200/50 hover:border-blue-400"
         >
           <svg
             class="w-8 h-8 text-blue-700 mb-3"
@@ -1059,17 +1059,17 @@
 
     <!-- Control Panel Features -->
     <section class="max-w-7xl mx-auto px-4 py-8 md:py-16 text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-        <span class="text-blue-600">User-Friendly </span> Control Panel
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 text-overflow-safe">
+        <span class="gradient-heading">User-Friendly </span> Control Panel
       </h2>
-      <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-12">
+      <p class="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto mb-12 px-4 text-overflow-safe">
         Manage your hosting with ease using our intuitive control panel. Whether
         you're a beginner or an experienced user, our control panel offers all
         the essential tools you need to manage your website, domains, and email.
       </p>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 transparent-card text-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4">
+        <div class="p-6 transparent-card text-center hover-lift fade-in-on-scroll">
           <div class="flex justify-center mb-4">
             <svg
               class="w-10 h-10 text-blue-700"
@@ -1102,7 +1102,7 @@
           </p>
         </div>
 
-        <div class="p-6 transparent-card text-center">
+        <div class="p-6 transparent-card text-center hover-lift fade-in-on-scroll">
           <div class="flex justify-center mb-4">
             <svg
               class="w-10 h-10 text-blue-700"
@@ -1129,7 +1129,7 @@
           </p>
         </div>
 
-        <div class="p-6 transparent-card text-center">
+        <div class="p-6 transparent-card text-center hover-lift fade-in-on-scroll">
           <div class="flex justify-center mb-4">
             <svg
               class="w-10 h-10 text-blue-700"
@@ -1163,11 +1163,11 @@
       class="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white py-12 mb-10"
     >
       <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 text-overflow-safe">
           <span class="text-green-300 font-bold">30 DAY</span>
           <span class="text-cyan-400 font-bold"> Money-Back Guarantee</span>
         </h2>
-        <p class="text-lg mb-6">
+        <p class="text-base sm:text-lg mb-6 px-4 text-overflow-safe">
           We are confident you'll love our hosting services. If you're not
           completely satisfied within the first 30 days, we'll refund your
           money—no questions asked.
@@ -1190,7 +1190,7 @@
 />
 <!-- Map Container -->
 <section class="max-w-7xl mx-auto px-4 mb-16 relative z-10">
-  <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8 text-center">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-8 text-center px-4 text-overflow-safe">
     Our Global Data Center Network
   </h2>
 
@@ -1287,20 +1287,20 @@
 
     <!-- benefits section -->
 <section class="max-w-7xl mx-auto px-4 py-12 md:py-20 text-center mb-16">
-  <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 text-overflow-safe">
     Why Choose NeedyHost?
   </h2>
 
-  <p class="text-lg text-slate-700 max-w-3xl mx-auto mb-12">
+  <p class="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto mb-12 px-4 text-overflow-safe">
     At NeedyHost, we are committed to providing top-notch hosting solutions that
     empower your online presence.
   </p>
 
   <!-- Cards grid -->
-  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-left">
+  <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 text-left px-4">
     
     <!-- Card -->
-    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover:shadow-xl transition-all">
+    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover-lift fade-in-on-scroll">
       <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-blue-600">
         ✓
       </div>
@@ -1312,7 +1312,7 @@
       </p>
     </div>
 
-    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover:shadow-xl transition-all">
+    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover-lift fade-in-on-scroll">
       <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-blue-600">
         💬
       </div>
@@ -1324,7 +1324,7 @@
       </p>
     </div>
 
-    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover:shadow-xl transition-all">
+    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover-lift fade-in-on-scroll">
       <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-blue-600">
         ⚡
       </div>
@@ -1336,7 +1336,7 @@
       </p>
     </div>
 
-    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover:shadow-xl transition-all">
+    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover-lift fade-in-on-scroll">
       <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-blue-600">
         🔒
       </div>
@@ -1348,7 +1348,7 @@
       </p>
     </div>
 
-    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover:shadow-xl transition-all">
+    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover-lift fade-in-on-scroll">
       <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-blue-600">
         🖱️
       </div>
@@ -1360,7 +1360,7 @@
       </p>
     </div>
 
-    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover:shadow-xl transition-all">
+    <div class="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 p-6 shadow-sm hover-lift fade-in-on-scroll">
       <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-blue-600">
         💰
       </div>
@@ -1381,15 +1381,15 @@
       class="max-w-7xl mx-auto px-4 py-8 md:py-16 text-center bg-slate-100 py-12 mb-16"
     >
       <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 px-4 text-overflow-safe">
           What Our Customers Say
         </h2>
-        <p class="text-lg text-slate-700 max-w-3xl mx-auto mb-8">
+        <p class="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto mb-8 px-4 text-overflow-safe">
           Hear from some of our satisfied customers who have experienced the
           NeedyHost difference.
         </p>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-6 transparent-card text-center">
+          <div class="p-6 transparent-card text-center hover-lift fade-in-on-scroll"
             <p class="text-sm text-slate-700 italic mb-4">
               "NeedyHost has transformed my online business. Their reliable
               hosting and excellent support have made all the difference!"
@@ -1397,7 +1397,7 @@
             <h3 class="text-md font-bold text-slate-900">— Shahanze Manik</h3>
           </div>
 
-          <div class="p-6 transparent-card text-center">
+          <div class="p-6 transparent-card text-center hover-lift fade-in-on-scroll"
             <p class="text-sm text-slate-700 italic mb-4">
               "I love how easy it is to manage my website with NeedyHost's
               control panel. The one-click installations saved me so much time!"
@@ -1405,7 +1405,7 @@
             <h3 class="text-md font-bold text-slate-900">— Gazi Taoshif</h3>
           </div>
 
-          <div class="p-6 transparent-card text-center">
+          <div class="p-6 transparent-card text-center hover-lift fade-in-on-scroll"
             <p class="text-sm text-slate-700 italic mb-4">
               "The speed and uptime of my website have been outstanding since
               switching to NeedyHost. Highly recommend their services!"
@@ -1418,9 +1418,9 @@
 
     <!-- trusted by section -->
     <section class="max-w-7xl mx-auto px-4 py-8 md:py-16">
-      <div
-        class="flex flex-wrap justify-center items-center gap-6 md:gap-12 lg:gap-16"
-      >
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-12 lg:gap-16 px-4"
+        >
         <div
           class="h-10 w-auto transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-[0_0px_10px_rgba(255,100,0,0.6)]"
         >
@@ -1482,12 +1482,12 @@
     <section class="bg-slate-100 py-12 md:py-20">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 px-4 text-overflow-safe">
             Need help? We are here for you!
           </h2>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4">
           <div
             class="p-6 bg-white border border-slate-200 shadow-md rounded-lg text-center"
           >
@@ -1618,16 +1618,46 @@
       <div
         class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4"
       >
-        <div class="text-sm text-slate-400">
+        <div class="text-xs sm:text-sm text-slate-400 text-center md:text-left">
           © <span id="year"></span> NeedyHost — All rights reserved.
         </div>
-        <div class="flex gap-4 text-sm text-slate-400">
-          <a href="#/about" class="hover:text-white">About</a>
-          <a href="#/contact" class="hover:text-white">Contact</a>
-          <a href="#/">Privacy</a>
+        <div class="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-slate-400">
+          <a href="about.html" class="hover:text-white transition">About</a>
+          <a href="contact.html" class="hover:text-white transition">Contact</a>
+          <a href="index.html" class="hover:text-white transition">Privacy</a>
         </div>
       </div>
     </footer>
+
+    <!-- Scroll animation observer -->
+    <script>
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      // Observe all fade-in elements on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+          observer.observe(el);
+        });
+        
+        // Set current year
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
 
 
 
@@ -1638,32 +1668,62 @@
     <script>
 // ====== Navbar scroll effect ======
   const navInner = document.getElementById("nav-inner");
+  const navbar = document.getElementById("navbar");
+  
   window.addEventListener("scroll", () => {
-    if (!navInner) return;
+    if (!navInner || !navbar) return;
+    
     if (window.scrollY > 40) {
-      navInner.classList.add("nav-glass", "nav-scrolled", "px-6");
+      // Scrolled state: shrink, center, glassmorphism
+      navInner.classList.add("navbar-scrolled", "nav-glass", "nav-scrolled", "rounded-xl");
       navInner.classList.remove(
         "w-full",
         "max-w-full",
-        "rounded-none",
         "bg-gradient-to-r",
         "from-blue-700",
         "via-blue-600",
         "to-blue-500",
         "text-white"
       );
+      // Update text colors for scrolled state, but keep login button readable
+      const navLinks = navInner.querySelectorAll("a, button");
+      navLinks.forEach(link => {
+        if (!link.closest(".dropdown")) {
+          // Keep login button with white background and blue text for readability
+          if (link.href && link.href.includes("login.html")) {
+            link.classList.remove("text-slate-900");
+            link.classList.add("bg-white", "text-blue-700", "hover:bg-blue-50");
+          } else {
+            link.classList.add("text-slate-900");
+            link.classList.remove("text-white");
+          }
+        }
+      });
     } else {
-      navInner.classList.remove("nav-glass", "nav-scrolled", "px-6");
+      // Initial state: full width with rounded corners
+      navInner.classList.remove("navbar-scrolled", "nav-glass", "nav-scrolled");
       navInner.classList.add(
         "w-full",
         "max-w-full",
-        "rounded-none",
+        "rounded-xl",
         "bg-gradient-to-r",
         "from-blue-700",
         "via-blue-600",
         "to-blue-500",
         "text-white"
       );
+      // Restore white text
+      const navLinks = navInner.querySelectorAll("a, button");
+      navLinks.forEach(link => {
+        if (!link.closest(".dropdown")) {
+          link.classList.remove("text-slate-900");
+          link.classList.add("text-white");
+          // Ensure login button has proper styling
+          if (link.href && link.href.includes("login.html")) {
+            link.classList.add("bg-white", "text-blue-700");
+          }
+        }
+      });
     }
   });
 
@@ -1704,73 +1764,76 @@
 
 
 
-      //  Price Card Functionality (Currency & Period Switch)
-
+      // Price Card Functionality (Currency & Period Switch)
       // Initial state
       let currentPeriod = "yearly"; // 'yearly' or 'monthly'
-      let currentCurrency = "BDT"; // 'BDT' or 'USD';
+      let currentCurrency = "BDT"; // 'BDT' or 'USD'
 
-      //  Utility: Format price based on currency
+      // Utility: Format price based on currency
       function formatPrice(currency, price) {
         if (currency === "BDT") {
           return `৳ ${price.toLocaleString("en-US")}`;
         } else {
-          <!--  Use $ for USD -->
-          return `$ ${price}`;
+          return `$${price}`;
         }
       }
 
-      //  Utility: Format renew price based on currency and period
+      // Utility: Format renew price based on currency and period
       function formatRenewText(currency, renewPrice, period) {
         const renewText =
           currency === "BDT"
             ? `TK ${renewPrice.toLocaleString("en-US")}`
-            : `$ ${renewPrice}`; // Changed from $ to TK for BDT display
+            : `$${renewPrice}`;
         const periodText = period === "yearly" ? "yr" : "mo";
         return `Renew at ${renewText} /${periodText}`;
       }
 
-      // Main function to update all price card data
+      // Main function to update all price card data with smooth animations
       function updatePrices() {
-        // 1. Update the buttons in the switches
-        // Billing Switch
-        const billingButtons = document.querySelectorAll(
-          "#billing-switch button"
-        );
-        billingButtons.forEach((button) => {
-          if (button.dataset.period === currentPeriod) {
-            button.classList.add("bg-blue-700", "text-white");
-            button.classList.remove("text-slate-600", "hover:text-blue-700");
-          } else {
-            button.classList.remove("bg-blue-700", "text-white");
-            button.classList.add("text-slate-600", "hover:text-blue-700");
-          }
+        // Add updating class for smooth transition
+        document.querySelectorAll('[id$="-price"]').forEach((el) => {
+          el.classList.add("price-transition", "updating");
         });
 
-        // Currency Switch
-        const currencyButtons = document.querySelectorAll(
-          "#currency-switch button"
-        );
-        currencyButtons.forEach((button) => {
-          if (button.dataset.currency === currentCurrency) {
-            button.classList.add("bg-slate-200", "text-slate-800");
-            button.classList.remove("text-slate-600", "hover:text-slate-800");
-          } else {
-            button.classList.remove("bg-slate-200", "text-slate-800");
-            button.classList.add("text-slate-600", "hover:text-slate-800");
-          }
-        });
+        // Update after a brief delay for smooth animation
+        setTimeout(() => {
+          // 1. Update the buttons in the switches
+          // Billing Switch
+          const billingButtons = document.querySelectorAll(
+            "#billing-switch button"
+          );
+          billingButtons.forEach((button) => {
+            if (button.dataset.period === currentPeriod) {
+              button.classList.add("bg-blue-700", "text-white");
+              button.classList.remove("text-slate-600", "hover:text-blue-700");
+            } else {
+              button.classList.remove("bg-blue-700", "text-white");
+              button.classList.add("text-slate-600", "hover:text-blue-700");
+            }
+          });
 
-        // 2. Update the prices and periods on all cards
-        document.querySelectorAll('[id$="-price"]').forEach((priceElement) => {
-          const planId = priceElement.id.replace("-price", ""); // e.g., 'essential'
+          // Currency Switch
+          const currencyButtons = document.querySelectorAll(
+            "#currency-switch button"
+          );
+          currencyButtons.forEach((button) => {
+            if (button.dataset.currency === currentCurrency) {
+              button.classList.add("bg-slate-200", "text-slate-800");
+              button.classList.remove("text-slate-600", "hover:text-slate-800");
+            } else {
+              button.classList.remove("bg-slate-200", "text-slate-800");
+              button.classList.add("text-slate-600", "hover:text-slate-800");
+            }
+          });
 
-          // 2a. Update Price
-          const priceKey = `data-price-${currentCurrency.toLowerCase()}-${currentPeriod}`;
-          const newPrice =
-            priceElement.dataset[
-              priceKey.replace("data-", "").replace(/-/g, "")
-            ];
+          // 2. Update the prices and periods on all cards
+          document.querySelectorAll('[id$="-price"]').forEach((priceElement) => {
+            const planId = priceElement.id.replace("-price", ""); // e.g., 'essential'
+
+          // 2a. Update Price - Access data attributes correctly
+          const priceAttr = `data-price-${currentCurrency.toLowerCase()}-${currentPeriod}`;
+          const newPrice = priceElement.getAttribute(priceAttr);
+          
           if (newPrice) {
             priceElement.textContent = formatPrice(
               currentCurrency,
@@ -1778,56 +1841,51 @@
             );
           }
 
-          // 2b. Update Period (/yr or /mo)
-          const periodElement = document.getElementById(`${planId}-period`);
-          if (periodElement) {
-            periodElement.textContent =
-              currentPeriod === "yearly" ? "/yr" : "/mo";
-          }
-
-          // 2c. Update Renewal Text (Hardcoded Renewals for simplicity)
-          const renewElement = document.getElementById(`${planId}-renew`);
-          if (renewElement) {
-            let renewPrice;
-            if (planId === "essential") {
-              // New renewal prices: BDT 3499, USD 38
-              renewPrice = currentCurrency === "BDT" ? 3499 : 38;
-            } else if (planId === "business") {
-              // New renewal prices: BDT 6299, USD 68
-              renewPrice = currentCurrency === "BDT" ? 6299 : 68;
-            } else if (planId === "power") {
-              // New renewal prices: BDT 11999, USD 130
-              renewPrice = currentCurrency === "BDT" ? 11999 : 130;
+            // 2b. Update Period (/yr or /mo)
+            const periodElement = document.getElementById(`${planId}-period`);
+            if (periodElement) {
+              periodElement.textContent =
+                currentPeriod === "yearly" ? "/yr" : "/mo";
             }
-            if (renewPrice) {
-              renewElement.textContent = formatRenewText(
-                currentCurrency,
-                renewPrice,
-                currentPeriod
-              );
+
+            // 2c. Update Renewal Text
+            const renewElement = document.getElementById(`${planId}-renew`);
+            if (renewElement) {
+              let renewPrice;
+              if (planId === "essential") {
+                renewPrice = currentCurrency === "BDT" ? 3499 : 38;
+              } else if (planId === "business") {
+                renewPrice = currentCurrency === "BDT" ? 6299 : 68;
+              } else if (planId === "power") {
+                renewPrice = currentCurrency === "BDT" ? 11999 : 130;
+              }
+              if (renewPrice) {
+                renewElement.textContent = formatRenewText(
+                  currentCurrency,
+                  renewPrice,
+                  currentPeriod
+                );
+              }
             }
-          }
 
-          // 2d. Update Discount Tag (Optional: Based on your current data attributes)
-          // Find the closest discount tag
-          const container = priceElement.closest(".price-card-container");
-          const discountTag = container
-            ? container.querySelector("[data-discount]")
-            : null;
+            // 2d. Update Discount Tag
+            const container = priceElement.closest(".price-card-container");
+            const discountTag = container
+              ? container.querySelector("[data-discount]")
+              : null;
 
-          if (discountTag) {
-            const initialDiscountText = discountTag.textContent.trim();
-
-            // Only show discount tag for 'yearly' period
-            if (currentPeriod === "yearly") {
-              discountTag.style.display = "inline-block";
-              // You could dynamically calculate/change the percentage here if data attributes were available for both periods
-            } else {
-              // Remove the discount tag when switching to monthly
-              discountTag.style.display = "none";
+            if (discountTag) {
+              if (currentPeriod === "yearly") {
+                discountTag.style.display = "inline-block";
+              } else {
+                discountTag.style.display = "none";
+              }
             }
-          }
-        });
+
+            // Remove updating class
+            priceElement.classList.remove("updating");
+          });
+        }, 150);
       }
 
       // Event Listeners for the switches
@@ -1835,27 +1893,35 @@
         // Initial update on page load
         updatePrices();
 
-        // Billing Period Switch Listener
-        document
-          .getElementById("billing-switch")
-          .addEventListener("click", (e) => {
-            const newPeriod = e.target.dataset.period;
-            if (newPeriod && newPeriod !== currentPeriod) {
-              currentPeriod = newPeriod;
-              updatePrices();
+        // Billing Period Switch Listener - Fixed to handle button clicks properly
+        const billingSwitch = document.getElementById("billing-switch");
+        if (billingSwitch) {
+          billingSwitch.addEventListener("click", (e) => {
+            const button = e.target.closest("button");
+            if (button && button.dataset.period) {
+              const newPeriod = button.dataset.period;
+              if (newPeriod && newPeriod !== currentPeriod) {
+                currentPeriod = newPeriod;
+                updatePrices();
+              }
             }
           });
+        }
 
-        // Currency Switch Listener
-        document
-          .getElementById("currency-switch")
-          .addEventListener("click", (e) => {
-            const newCurrency = e.target.dataset.currency;
-            if (newCurrency && newCurrency !== currentCurrency) {
-              currentCurrency = newCurrency;
-              updatePrices();
+        // Currency Switch Listener - Fixed to handle button clicks properly
+        const currencySwitch = document.getElementById("currency-switch");
+        if (currencySwitch) {
+          currencySwitch.addEventListener("click", (e) => {
+            const button = e.target.closest("button");
+            if (button && button.dataset.currency) {
+              const newCurrency = button.dataset.currency;
+              if (newCurrency && newCurrency !== currentCurrency) {
+                currentCurrency = newCurrency;
+                updatePrices();
+              }
             }
           });
+        }
       });
 
       <!-- Helper to create DOM element from HTML string -->

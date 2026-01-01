@@ -1,0 +1,266 @@
+/* Transparent card Glassmorphism effect */
+.transparent-card {
+  background: rgba(255, 255, 255, 0.3); 
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  color: #1e293b; 
+}
+
+/* Lighter glass effect for elements inside cards */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navbar scroll states */
+.navbar-full {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-scrolled {
+  width: 100%;
+  max-width: 80rem; /* 7xl = 80rem */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.75rem; /* rounded-xl */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transform: scale(0.95);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Nav bar when scrolled (glassmorphism) */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.nav-scrolled {
+  color: #0f172a; /* slate-900 */
+}
+
+.nav-scrolled a,
+.nav-scrolled button {
+  color: #0f172a;
+}
+
+.nav-scrolled a:hover,
+.nav-scrolled button:hover {
+  background-color: rgba(15, 23, 42, 0.08);
+}
+
+/* Keep iframe map responsive */
+.map-wrap {
+  aspect-ratio: 16/8;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Gradient color variables */
+:root {
+  --g1: #ffd6d6;
+  --g2: #ccf7ff;
+  --g3: #e0d4ff;
+  --g4: #d6ecff;
+}
+
+/* Multi-color gradient animation */
+.bg-animate {
+  background: linear-gradient(
+    135deg,
+    var(--g1),
+    var(--g2),
+    var(--g3),
+    var(--g4)
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+/* Dropdown animations (desktop + mobile) */
+.dropdown {
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.mobile-dropdown.show {
+  max-height: 300px;
+  opacity: 1;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%; 
+  }
+}
+
+/* Typography improvements - Gradient headings */
+.gradient-heading {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-heading-alt {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Scroll-based animations */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Price card animations */
+.price-card-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price-card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .text-responsive-xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-responsive-xl {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+/* Prevent text overflow */
+.text-overflow-safe {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Container max-width fixes */
+.container-responsive {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Smooth transitions for price updates */
+.price-transition {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.price-transition.updating {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
